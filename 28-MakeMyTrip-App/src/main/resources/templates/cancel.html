@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Ticket</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Cancel Ticket</h1>
+    <form th:action="@{/cancelTicket{ticketId}}" method="post">
+        <div class="form-group">
+            <label for="ticketId">Ticket ID:</label>
+            <input type="text" id="ticketId" name="ticketId" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-danger">Cancel Ticket</button>
+    </form>
+    <div th:if="${msg}" class="alert alert-danger" role="alert">
+        <p th:text="${msg}">Error message here</p>
+    </div>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

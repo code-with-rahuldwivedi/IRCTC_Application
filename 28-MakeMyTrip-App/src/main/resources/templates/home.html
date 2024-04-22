@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMyTrip</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include your custom CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; 
+            color: #343a40; 
+        }
+
+        
+        header {
+            background-color: #343a40; 
+            padding: 10px 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem; 
+        }
+
+        .nav-link {
+            font-size: 1.1rem; 
+            margin-right: 20px; 
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background-image: url('travel.jpg');
+            background-size: cover;
+            color: rgb(0, 128, 255); /* White text color for contrast */
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem; 
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem; 
+            margin-bottom: 40px;
+        }
+
+        
+        .featured {
+            background-image: url('travel.jpg-28-MakeMyTrip-App/src/main/resources/images');
+            background-size: cover;
+            color: rgb(0, 128, 255); 
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .featured h2 {
+            font-size: 3rem; 
+            margin-bottom: 20px;
+        }
+
+        .featured p {
+            font-size: 1.1rem; 
+            margin-bottom: 40px;
+        }
+
+        .explore {
+            background-color: #fff; 
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .explore h2 {
+            font-size: 3rem; 
+            margin-bottom: 20px;
+        }
+
+        .explore p {
+            font-size: 1.1rem; 
+            margin-bottom: 40px;
+        }
+
+        .explore .card {
+            margin-bottom: 20px; /* Add margin between cards */
+        }
+        footer {
+   			 background-color: #333;
+    		 color: #fff;
+    		 padding: 20px 0;
+    		 text-align: center;
+		}
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">MakeMyTrip</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Flights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Hotels</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/train">Trains</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Content Section -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h2 class="display-4">Discover Your Next Adventure</h2>
+                <p class="lead">Find the best deals on flights, hotels, and vacation packages.</p>
+                <a href="/explore" class="btn btn-primary btn-lg">Explore Now</a>
+            </div>
+        </section>
+
+        <!-- Featured Destinations Section -->
+        <section class="featured">
+            <div class="container">
+                <h2 class="display-4">Featured Destinations</h2>
+                <p class="lead">Explore our curated list of top destinations for your next getaway.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <h1 class="text-center mt-5">Explore Your Next Adventure</h1>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Destination 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Destination 1</h5>
+                            <p class="card-text">Explore the beauty of Destination 1 with MakeMyTrip.</p>
+                            <a href="/explore" class="btn btn-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Destination 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Destination 2</h5>
+                            <p class="card-text">Discover the charm of Destination 2 with MakeMyTrip.</p>
+                            <a href="/explore" class="btn btn-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Destination 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Destination 3</h5>
+                            <p class="card-text">Experience the adventure of Destination 3 with MakeMyTrip.</p>
+                            <a href="/explore" class="btn btn-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3>PRODUCT OFFERING</h3>
+        <p>
+
+Flights, International Flights, Charter Flights, Hotels, International Hotels, Homestays and Villas, Activities, Holidays In India, International Holidays, Book Hotels From UAE, myBiz for Corporate Travel, Book Online Cabs, Book Bus Tickets, Book Train Tickets, Cheap Tickets to India, Book Flights From US, Book Flights From UAE, Trip Planner, Gift Cards, Gift, Wedding Gift, Anniversary Gift, Birthday Gift, Diwali Gift, Valentines Gift, Farewell Gift, Christmas Gift, New Year Gift, Trip Money, Trip Ideas, Travel Blog, PNR Status, MakeMyTrip Advertising Solutions, One Way Cab</p>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MakeMyTrip. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include your custom JavaScript files -->
+    <script src="scripts.js"></script>
+</body>
+</html>

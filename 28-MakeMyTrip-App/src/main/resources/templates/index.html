@@ -1,0 +1,174 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Book Ticket</title>
+	    <!-- Bootstrap CSS -->
+	    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	 <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; 
+            color: #343a40; 
+        }
+
+        
+        header {
+            background-color: #343a40; 
+            padding: 00px 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem; 
+        }
+
+        .nav-link {
+            font-size: 1.1rem; 
+            margin-right: 20px; 
+        }
+
+        
+        .hero {
+            background-image: url('image/travel.jpg');
+            background-size: cover;
+            color: rgb(0, 128, 255); 
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem; 
+            margin-bottom: 40px;
+        }
+
+        
+        .featured {
+            background-image: url('images/travle.jpg');
+            background-size: cover;
+            color: rgb(0, 128, 255); 
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .featured h2 {
+            font-size: 3rem; 
+            margin-bottom: 20px;
+        }
+
+        .featured p {
+            font-size: 1.1rem; 
+            margin-bottom: 40px;
+        }
+
+        
+        footer {
+            background-color: #343a40; 
+            color: #fff; 
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1rem; 
+            margin: 0;
+        }
+        
+       
+        .btn-submit {
+            background-color: #007bff; 
+            color: #fff; 
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+	<body>
+		<header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="/">MakeMyTrip</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">                
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/tickets">Show Ticket</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+	    <div class="container">
+	        <h1 class="text-center">Book Ticket</h1>
+	        <!-- Booking form -->
+	        <form action="#" th:action="@{/bookTicket}" th:object="${passenger}" method="post" class="booking-form">
+	            <div class="form-group">
+	                <label for="name">Name:</label>
+	                <input type="text" id="name" class="form-control" th:field="*{name}" required>
+	            </div>
+	            <div class="form-group">
+	                <label for="dob">Date of Birth:</label>
+	                <input type="date" id="dob" class="form-control" th:field="*{dob}" required>
+	            </div>
+	             
+	            <div class="form-group">
+	                <label for="doj">Date of Journey:</label>
+	                <input type="date" id="doj" class="form-control" th:field="*{doj}" required>
+	            </div>
+	            <div class="form-group">
+	                <label for="source">Source:</label>
+	                <input type="text" id="source" class="form-control" th:field="*{source}" required>
+	            </div>
+	            <div class="form-group">
+	                <label for="destination">Destination:</label>
+	                <input type="text" id="destination" class="form-control" th:field="*{destination}" required>
+	            </div>
+	            <div class="form-group">
+	                <label for="trainNum">Train Number:</label>
+	                <input type="text" id="trainNum" class="form-control" th:field="*{trainNum}" required>
+	            </div>
+	            <button type="submit" class="btn btn-submit btn-block">Book Ticket</button>
+	        </form>
+	        <!-- Confirmation message -->
+	        <div th:if="${message}" class="confirmation-message">
+	            <p th:text="${message}" class="text-center"></p>
+	        </div>
+	    </div>
+	    <main>
+        <section class="container">
+            <h2>Welcome to Our Website</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan magna euismod felis dictum tempor.</p>
+            <a href="#" class="btn">Learn More</a>
+        </section>
+    	</main>
+	    <footer>
+        	<div class="container">
+            	<p>&copy; 2024 Best Design Example. All rights reserved.</p>
+        	</div>
+    	</footer>
+	    <!-- Bootstrap JS (Optional) -->
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+	
